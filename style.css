@@ -1,3 +1,42 @@
-span{
-  margin:25px;
+body{
+  background-color: #d36a6a;
+  font-size: 12px;
 }
+
+.container{
+  padding-top:200px;
+}
+
+.span-numbers,{
+  padding:30px 0px;
+}
+
+.span-titles{
+  padding:10px 0px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2em;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  color:white;
+}
+
+span{
+  font-family: 'PT Sans', sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  color:white;
+  font-size: 4em;
+}
+
+/*@media (max-width: 750px) {
+  span {
+    font-size: 2em;
+  }
+
+  .span-title{
+    font-size: 1em;
+  }
+}
+*/

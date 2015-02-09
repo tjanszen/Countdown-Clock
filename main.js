@@ -5,14 +5,21 @@ Number.prototype.pad = function(size) {
     }
 
 $(function(){
-  var targetElement = $('#countdown')
-  var targetDate = new Date(targetElement.data('target'))
+  var targetDays = $('#countdownDays')
+  var targetHours = $('#countdownHours')
+  var targetMins = $('#countdownMins')
+  var targetSecs = $('#countdownSecs')
+  var targetContainer = $('#coundownContainer')
+  var targetDate = new Date(targetContainer.data('target'))
   console.log(targetDate);
-  var spanDays = $('<span>', {id: 'countdownDays'});
-  var spanHours = $('<span>', {id: 'countdownHours'});
-  var spanMinutes = $('<span>', {id: 'countdownMinutes'});
-  var spanSeconds = $('<span>', {id: 'countdownSeconds'});
-  targetElement.append([spanDays, spanHours, spanMinutes, spanSeconds]);
+  var spanDays = $('<span>', {id: 'spanDays'});
+  var spanHours = $('<span>', {id: 'spanHours'});
+  var spanMinutes = $('<span>', {id: 'spanMinutes'});
+  var spanSeconds = $('<span>', {id: 'spanSeconds'});
+  targetDays.append(spanDays)
+  targetHours.append(spanHours)
+  targetMins.append(spanMinutes)
+  targetSecs.append(spanSeconds)
   window.setInterval(clock, 1000)
   function  clock(){
   var delta = Math.abs(targetDate - new Date()) / 1000;
